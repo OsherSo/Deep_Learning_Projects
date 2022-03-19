@@ -47,7 +47,7 @@ def GetHomeTeamShots(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamShots(df, home_team, away_team, year, month, 
                      B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -57,7 +57,7 @@ def GetAwayTeamShots(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetHomeTeamShotsOnTarget(df, home_team, away_team, year, month, 
                              B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -67,7 +67,7 @@ def GetHomeTeamShotsOnTarget(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamShotsOnTarget(df, home_team, away_team, year, month, 
                              B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -77,7 +77,7 @@ def GetAwayTeamShotsOnTarget(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetHomeTeamCorners(df, home_team, away_team, year, month, 
                        B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -87,7 +87,7 @@ def GetHomeTeamCorners(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamCorners(df, home_team, away_team, year, month, 
                        B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -97,7 +97,7 @@ def GetAwayTeamCorners(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetHomeTeamFoulsCommitted(df, home_team, away_team, year, month, 
                               B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -107,7 +107,7 @@ def GetHomeTeamFoulsCommitted(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamFoulsCommitted(df, home_team, away_team, year, month, 
                               B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -117,7 +117,7 @@ def GetAwayTeamFoulsCommitted(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetHomeTeamYellowCards(df, home_team, away_team, year, month, 
                            B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -127,7 +127,7 @@ def GetHomeTeamYellowCards(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamYellowCards(df, home_team, away_team, year, month, 
                            B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -137,7 +137,7 @@ def GetAwayTeamYellowCards(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetHomeTeamRedCards(df, home_team, away_team, year, month, 
                         B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -147,7 +147,7 @@ def GetHomeTeamRedCards(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")
 
 def GetAwayTeamRedCards(df, home_team, away_team, year, month, 
                         B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
@@ -157,4 +157,4 @@ def GetAwayTeamRedCards(df, home_team, away_team, year, month,
                         B365CH=B365CH, B365CD=B365CD, B365CA=B365CA, 
                         B365C_OVER=B365C_OVER, B365C_UNDER=B365C_UNDER)
     else:
-        return -1
+        raise Exception("Sorry, df have null values.")

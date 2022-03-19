@@ -27,7 +27,9 @@ def GetDataUrl(leauge_id):
         "HS", "AS", "HST", "AST", "HC", "AC", "HF", "AF", "HY", "AY", "HR", "AR"
     ]]
 
-    if (0 == df.isnull().sum().sum()):
+    if 0 == df.isnull().sum().sum():
         return df
     else:
-        return -1
+        print(df.isnull().sum().sum())
+        df = df.dropna()
+        return df

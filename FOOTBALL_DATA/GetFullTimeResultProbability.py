@@ -8,6 +8,14 @@ import pandas as pd
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+def RunModel(X, y, test, print_status=0):
+    model = LogisticRegression()
+    model.fit(X, y)
+    if 1 == print_status:
+        print(classification_report(y, model.predict(X)))
+    return model.predict_proba(test)[0][1]
 
 def home_win(FTHG, FTAG):
     if (FTHG > FTAG):
@@ -39,8 +47,8 @@ def over_3_5(FTHG, FTAG):
         return 1
     return 0
     
-def GetFullTimeResultProbability(leauge_id, home_team, away_team, year, month, 
-                              B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER):
+def GetProbability(leauge_id, home_team, away_team, year, month, 
+                              B365CH, B365CD, B365CA, B365C_OVER, B365C_UNDER, print_status=0):
     
     df = GetDataUrl(leauge_id)
 
@@ -159,33 +167,21 @@ def GetFullTimeResultProbability(leauge_id, home_team, away_team, year, month,
     test = scaler.transform(test)
 
     y = df["HomeWin"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    home_proba = model.predict_proba(test)[0][1]
+    home_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     y = df["DrawWin"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    draw_proba = model.predict_proba(test)[0][1]
+    draw_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     y = df["AwayWin"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    away_proba = model.predict_proba(test)[0][1]
+    away_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     y = df["Over_1_5"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    over_1_5_proba = model.predict_proba(test)[0][1]
+    over_1_5_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     y = df["Over_2_5"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    over_2_5_proba = model.predict_proba(test)[0][1]
+    over_2_5_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     y = df["Over_3_5"]
-    model = LogisticRegression()
-    model.fit(X, y)
-    over_3_5_proba = model.predict_proba(test)[0][1]
+    over_3_5_proba = RunModel(X=X, y=y, test=test, print_status=print_status)
 
     return (home_proba, draw_proba, away_proba, over_1_5_proba, over_2_5_proba, over_3_5_proba)
