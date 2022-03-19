@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 def GetDataUrl(leauge_id):
+    
     data = [
         f"https://www.football-data.co.uk/mmz4281/1920/{leauge_id}.csv",
         f"https://www.football-data.co.uk/mmz4281/2021/{leauge_id}.csv",
@@ -26,7 +27,7 @@ def GetDataUrl(leauge_id):
         "HS", "AS", "HST", "AST", "HC", "AC", "HF", "AF", "HY", "AY", "HR", "AR"
     ]]
 
-    if 0 == df.isnull().sum().sum():
+    if (0 == df.isnull().sum().sum()):
         return df
     else:
         return -1
