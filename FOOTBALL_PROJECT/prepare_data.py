@@ -14,7 +14,7 @@ def prepare_data(league_name):
     x = pd.concat([team_data, odds], axis=1)
     y = df["target"]
 
-    test_size_1 = int(0.8 * len(x))
+    test_size_1 = int(0.7 * len(x))
 
     x_train = x[:test_size_1]
     y_train = y[:test_size_1]

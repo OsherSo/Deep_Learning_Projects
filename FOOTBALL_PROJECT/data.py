@@ -11,6 +11,12 @@ leagues_data = {
         "https://www.football-data.co.uk/mmz4281/2122/SP1.csv",
     ],
 
+    "Spain2": [
+        "https://www.football-data.co.uk/mmz4281/1920/SP2.csv",
+        "https://www.football-data.co.uk/mmz4281/2021/SP2.csv",
+        "https://www.football-data.co.uk/mmz4281/2122/SP2.csv",
+    ],
+
     "Germany1": [
         "https://www.football-data.co.uk/mmz4281/1920/D1.csv",
         "https://www.football-data.co.uk/mmz4281/2021/D1.csv",
@@ -39,5 +45,11 @@ leagues_data = {
         "https://www.football-data.co.uk/mmz4281/1920/N1.csv",
         "https://www.football-data.co.uk/mmz4281/2021/N1.csv",
         "https://www.football-data.co.uk/mmz4281/2122/N1.csv",
+    ],
+
+    "Belgium1": [
+        "https://www.football-data.co.uk/mmz4281/1920/B1.csv",
+        "https://www.football-data.co.uk/mmz4281/2021/B1.csv",
+        "https://www.football-data.co.uk/mmz4281/2122/B1.csv",
     ]
 }
